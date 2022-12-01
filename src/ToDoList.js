@@ -1,7 +1,10 @@
-const ToDoForm = () => {
+const ToDoList = ({todos}) => {
+    const lis = todos.map((todo,index) => {
+        return (<li key={index}>{todo}</li>)
+    })
     return(
-        <h2>New To-Do</h2>
+        <ul>{lis}</ul>
     )
 }
 
-export default ToDoForm;
+export default ToDoList;
